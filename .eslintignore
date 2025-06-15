@@ -1,2 +1,2 @@
 src/app/actions.ts
-src/app/items/[id]/edit/form.tsx
+src/app/items/\\[id\\]/edit/form.tsx
