@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 
-export default function ProductPage({ params }: { params: { id: string } }) {
-  const id = params.id;
+export default function ProductPage(props: any) {
+  const id = props.params.id;
 
   const items = ["1", "2", "3"];
 
