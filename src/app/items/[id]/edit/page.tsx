@@ -1,16 +1,18 @@
-import { JSX } from "react";
+import { ReactElement } from "react";
 import { prisma } from "../../../../../lib/prisma";
 import Form from "./form";
 
-type Props = {
-  params: {
-    id: string;
-  };
-};
+interface Params {
+  id: string;
+}
+
+interface PageProps {
+  params: Params;
+}
 
 export default async function EditPage({
   params,
-}: Props): Promise<JSX.Element> {
+}: PageProps): Promise<ReactElement> {
   const item = await prisma.item.findUnique({
     where: { id: Number(params.id) },
   });
